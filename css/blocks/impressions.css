@@ -21,14 +21,14 @@
     height: 60px;
     border: solid 2px var(--add-color);
     border-radius: 50%;
-    background-image: url("../img/impressions-user-photo@1x.jpg");
+    background-image: url("img/impressions-user-photo@1x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .impressions__user-img{
-        background-image: url("../img/impressions-user-photo@2x.jpg");
+        background-image: url("img/impressions-user-photo@2x.jpg");
     }
 }
 

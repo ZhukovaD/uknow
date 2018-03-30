@@ -3,8 +3,8 @@
     font-style: normal;
     font-display: swap;
     src: local("Helvetica Regular"),
-    url("../fonts/HelveticaRegular.woff") format("woff"),
-    url("../fonts/HelveticaRegular.woff2") format("woff2");
+    url("fonts/HelveticaRegular.woff") format("woff"),
+    url("fonts/HelveticaRegular.woff2") format("woff2");
 }
 
 @font-face {
@@ -12,8 +12,8 @@
     font-style: normal;
     font-display: swap;
     src: local("Helvetica Light"),
-    url("../fonts/HelveticaLight.woff") format("woff"),
-    url("../fonts/HelveticaLight.woff2") format("woff2");
+    url("fonts/HelveticaLight.woff") format("woff"),
+    url("fonts/HelveticaLight.woff2") format("woff2");
 }
 
 @font-face {
@@ -21,7 +21,7 @@
     font-style: normal;
     font-display: swap;
     src: local("Myriad Pro Bold"),
-    url("../fonts/MyriadProBold.woff") format("woff"),
-    url("../fonts/MyriadProBold.woff2") format("woff2");
+    url("fonts/MyriadProBold.woff") format("woff"),
+    url("fonts/MyriadProBold.woff2") format("woff2");
 }
 

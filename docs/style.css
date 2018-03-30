@@ -453,8 +453,8 @@ template {
     font-style: normal;
     font-display: swap;
     src: local("Helvetica Regular"),
-    url("../fonts/HelveticaRegular.woff") format("woff"),
-    url("../fonts/HelveticaRegular.woff2") format("woff2");
+    url("fonts/HelveticaRegular.woff") format("woff"),
+    url("fonts/HelveticaRegular.woff2") format("woff2");
 }
 
 @font-face {
@@ -462,8 +462,8 @@ template {
     font-style: normal;
     font-display: swap;
     src: local("Helvetica Light"),
-    url("../fonts/HelveticaLight.woff") format("woff"),
-    url("../fonts/HelveticaLight.woff2") format("woff2");
+    url("fonts/HelveticaLight.woff") format("woff"),
+    url("fonts/HelveticaLight.woff2") format("woff2");
 }
 
 @font-face {
@@ -471,8 +471,8 @@ template {
     font-style: normal;
     font-display: swap;
     src: local("Myriad Pro Bold"),
-    url("../fonts/MyriadProBold.woff") format("woff"),
-    url("../fonts/MyriadProBold.woff2") format("woff2");
+    url("fonts/MyriadProBold.woff") format("woff"),
+    url("fonts/MyriadProBold.woff2") format("woff2");
 }
 
 :root{
@@ -734,7 +734,6 @@ body {
     font-size: var(--text-small);
     line-height: var(--text-small-line-height);
     font-style: normal;
-    line-height: 22px;
     color:#000000;
 }
 
@@ -2174,14 +2173,14 @@ img {
     height: 60px;
     border: solid 2px var(--add-color);
     border-radius: 50%;
-    background-image: url("../img/impressions-user-photo@1x.jpg");
+    background-image: url("img/impressions-user-photo@1x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .impressions__user-img{
-        background-image: url("../img/impressions-user-photo@2x.jpg");
+        background-image: url("img/impressions-user-photo@2x.jpg");
     }
 }
 
@@ -2758,25 +2757,25 @@ img {
 }
 
 .process__item--level .process__subtitle::before{
-    background-image: url("/img/level.svg");
+    background-image: url("img/level.svg");
     margin-top: 0;
 }
 
 .process__item--sum .process__subtitle::before{
-    background-image: url("/img/sum.svg");
+    background-image: url("img/sum.svg");
 }
 
 .process__item--material .process__subtitle::before{
-    background-image: url("/img/material.svg");
+    background-image: url("img/material.svg");
     margin-top: 0;
 }
 
 .process__item--practice .process__subtitle::before{
-    background-image: url("/img/practice.svg");
+    background-image: url("img/practice.svg");
 }
 
 .process__item--exams .process__subtitle::before{
-    background-image: url("/img/exams.svg");
+    background-image: url("img/exams.svg");
 }
 
 @media (max-width: 768px) {
@@ -3527,7 +3526,7 @@ img {
     height: 370px;
     width: 100%;
     background-color: rgb(240, 238, 232);
-    background-image: url("/img/map-desktop@1x.jpg");
+    background-image: url("img/map-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3536,7 +3535,7 @@ img {
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .map{
-    background-image: url("/img/map-desktop@2x.jpg");
+    background-image: url("img/map-desktop@2x.jpg");
     }
 }
 

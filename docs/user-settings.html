@@ -205,13 +205,21 @@
         <section class="profile">
             <h2 class="profile__title profile__title--no-border">Персональная информация</h2>
             <div class="profile__info profile__info--personal">
-                <picture>
-                    <img src="img/user-cat-desktop@1x.jpg" srcset="img/user-cat-desktop@2x.jpg 2x"
-                         alt="Кот Василий">
-                </picture>
-                <div class="profile__right">
-                    <button class="button third-button profile__get-file-button">Выбрать файл</button>
-                    <button class="button secondary-button profile__get-file-button">Сохранить</button>
+                <form enctype="multipart/form-data">
+                    <div class="profile__file-form-wrapper">
+                        <img src="img/user-cat-desktop@1x.jpg" srcset="img/user-cat-desktop@2x.jpg 2x"
+                             alt="Кот Василий">
+                        <div class="profile__form-group">
+                            <span class="profile__file">
+                                <input class="profile__get-file-input" type="file" name="avatar" id="image">
+                                <label class="button third-button profile__input-button" for="image">
+                                    <span>Выбрать файл</span>
+                                </label>
+                            </span>
+                            <button class="button secondary-button profile__get-file-button" type="submit">Сохранить</button>
+                        </div>
+                    </div>
+                </form>
                 </div>
             </div>
                 <form class="profile__form">

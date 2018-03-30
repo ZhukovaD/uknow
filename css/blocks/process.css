@@ -49,25 +49,25 @@
 }
 
 .process__item--level .process__subtitle::before{
-    background-image: url("/img/level.svg");
+    background-image: url("img/level.svg");
     margin-top: 0;
 }
 
 .process__item--sum .process__subtitle::before{
-    background-image: url("/img/sum.svg");
+    background-image: url("img/sum.svg");
 }
 
 .process__item--material .process__subtitle::before{
-    background-image: url("/img/material.svg");
+    background-image: url("img/material.svg");
     margin-top: 0;
 }
 
 .process__item--practice .process__subtitle::before{
-    background-image: url("/img/practice.svg");
+    background-image: url("img/practice.svg");
 }
 
 .process__item--exams .process__subtitle::before{
-    background-image: url("/img/exams.svg");
+    background-image: url("img/exams.svg");
 }
 
 @media (max-width: 768px) {

@@ -15,7 +15,7 @@ var uglify = require('gulp-uglify');
 var pump = require('pump');
 
 gulp.task("clean", function () {
-    return del("build");
+    return del("docs");
 });
 
 gulp.task("copy", function () {
@@ -27,7 +27,7 @@ gulp.task("copy", function () {
     ], {
         base: "."
     })
-        .pipe(gulp.dest("build"));
+        .pipe(gulp.dest("docs"));
 });
 
 gulp.task("style", function () {
@@ -39,7 +39,7 @@ gulp.task("style", function () {
         .pipe(postcss([
             atImport()
         ]))
-        .pipe(gulp.dest("build"))
+        .pipe(gulp.dest("docs"))
         .pipe(server.stream());
 });
 
@@ -58,7 +58,7 @@ gulp.task("sprite", function () {
             inlineSvg: true
         }))
         .pipe(rename("sprite.svg"))
-        .pipe(gulp.dest("build/img"));
+        .pipe(gulp.dest("docs/img"));
 });
 
 // gulp.task("sprite", function () {
@@ -84,7 +84,7 @@ gulp.task("images", function () {
 
 gulp.task("serve", function () {
     server.init({
-        server: "build/",
+        server: "docs/",
         notify: false,
         open: true,
         cors: true,
@@ -112,19 +112,19 @@ gulp.task('compress', function (cb) {
     pump([
             gulp.src('js/*.js'),
             uglify(),
-            gulp.dest('build/js')
+            gulp.dest('docs/js')
         ],
         cb
     );
 });
 
-// gulp.task("build", function (done) {
-//     run(
-//         "clean",
-//         "copy",
-//         "style",
-//         "sprite",
-//         "compress",
-//         done
-//     );
-// });
+gulp.task("docs", function (done) {
+    run(
+        "clean",
+        "copy",
+        "style",
+        "sprite",
+        "compress",
+        done
+    );
+});
