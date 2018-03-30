@@ -1,0 +1,161 @@
+.process{
+    max-width: var(--half-screen);
+    margin: 0 auto;
+}
+
+.process__item{
+    text-align: left;
+}
+
+.process__item:last-child{
+    margin-bottom: 55px;
+}
+
+.process__title{
+    font-family: var(--title-font);
+    color:var(--title-color);
+    font-size: var(--title-big);
+    line-height: var(--title-big-line-height);
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 75px;
+}
+
+.process__subtitle{
+    font-family: var(--title-font);
+    color:var(--title-color);
+    font-size: var(--title-medium);
+    line-height: var(--title-medium-line-height);
+    padding-bottom: 10px;
+}
+
+.process__description{
+    font-family: var(--text-font);
+    font-size: var(--text-medium);
+    line-height: var(--text-medium-line-height);
+    padding-bottom: 80px;
+}
+
+.process__subtitle::before{
+    content: "";
+    display: block;
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-right: 32px;
+    margin-top: 5px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.process__item--level .process__subtitle::before{
+    background-image: url("/img/level.svg");
+    margin-top: 0;
+}
+
+.process__item--sum .process__subtitle::before{
+    background-image: url("/img/sum.svg");
+}
+
+.process__item--material .process__subtitle::before{
+    background-image: url("/img/material.svg");
+    margin-top: 0;
+}
+
+.process__item--practice .process__subtitle::before{
+    background-image: url("/img/practice.svg");
+}
+
+.process__item--exams .process__subtitle::before{
+    background-image: url("/img/exams.svg");
+}
+
+@media (max-width: 768px) {
+    .process{
+        padding:var(--page-padding);
+    }
+}
+
+@media(max-width: 610px) {
+    .process__item--level .process__subtitle::before {
+        padding-bottom: 20px;
+    }
+
+    .process__item--sum .process__subtitle::before {
+        padding-bottom: 20px;
+    }
+
+    .process__item--material .process__subtitle::before {
+        padding-bottom: 20px;
+    }
+
+    .process__item--practice .process__subtitle::before {
+        padding-bottom: 20px;
+    }
+
+    .process__item--exams .process__subtitle::before {
+        padding-bottom: 20px;
+    }
+}
+
+@media(max-width: 550px) {
+
+    .process__item--material .process__subtitle::before {
+        padding-bottom: 30px;
+    }
+
+    .process__item--practice .process__subtitle::before {
+        padding-bottom: 60px;
+    }
+
+    .process__item--exams .process__subtitle::before {
+        padding-bottom: 50px;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .process__title{
+        margin-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .process__item--level .process__subtitle::before {
+        padding: 0;
+        display: block;
+        padding-left: 130px;
+        margin-bottom: 30px;
+    }
+
+    .process__item--sum .process__subtitle::before {
+        padding: 0;
+        display: block;
+        padding-left: 130px;
+        margin-bottom: 30px;
+    }
+
+    .process__item--material .process__subtitle::before {
+        padding: 0;
+        display: block;
+        padding-left: 130px;
+        margin-bottom: 30px;
+    }
+
+    .process__item--practice .process__subtitle::before {
+        padding: 0;
+        display: block;
+        padding-left: 130px;
+        margin-bottom: 30px;
+    }
+
+    .process__item--exams .process__subtitle::before {
+        padding: 0;
+        display: block;
+        padding-left: 130px;
+        margin-bottom: 30px;
+    }
+
+    .process__subtitle{
+        text-align: center;
+    }
+}

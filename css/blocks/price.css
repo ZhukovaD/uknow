@@ -1,0 +1,80 @@
+.price{
+    display:flex;
+    flex-direction: column;
+    min-height: 540px;
+    background-color: #1E1471;
+    background-image:var(--bg);
+    background-size: var(--bg-size);
+}
+
+.price__wrapper{
+    max-width: 886px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.price__title{
+    font-family: var(--title-font);
+    font-size: 180px;
+    color:#ffffff;
+    text-align: left;
+    margin-top: 170px;
+    margin-bottom: 80px;
+}
+
+.price__button{
+    width: 335px;
+    margin-bottom: 40px;
+}
+
+.price__info{
+    font-family: var(--lite-font);
+    font-size: var(--text-small);
+    line-height: var(--text-small-line-height);
+    color: #ffffff;
+    padding-bottom: 30px;
+}
+
+.price__link{
+    color:var(--button-inner-color);
+}
+
+.rubl{
+    font-size: 100px;
+}
+
+@media (max-width: 900px) {
+    .price__wrapper{
+        max-width: var(--width);
+        padding: var(--page-padding);
+    }
+
+    .price__title {
+        font-size: 160px;
+    }
+
+    .rubl{
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .price__title {
+        font-size: 90px;
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
+
+    .rubl{
+        font-size: 40px;
+        margin-left: 5px;
+    }
+
+    .price__button{
+        width: 280px;
+        margin-bottom: 30px;
+    }
+
+}

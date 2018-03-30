@@ -1,0 +1,52 @@
+.abonement-list{
+    list-style: none;
+    margin-top: 17px;
+    padding: 15px 10px 5px 15px;
+    width: 220px;
+    position: absolute;
+    top:39px;
+    left: 265px;
+}
+
+.main-nav--landing .abonement-list{
+    left: 125px;
+}
+
+.abonement--opened {
+    background-color: rgb(17,15,46);
+}
+
+.abonement-list{
+    display:none;
+}
+
+.abonement-list--opened{
+    display:block;
+    background-color: rgb(17,15,46);
+    z-index: 1000;
+}
+
+.abonement-list__item{
+    padding: 0 0 10px 0;
+}
+
+.abonement-list__item a{
+    text-decoration: none;
+    color:rgba(255,255,255,1);
+}
+
+.abonement-list__item a:hover{
+    text-decoration: none;
+    color:rgba(255,255,255,0.6);
+}
+
+.abonement-list__item a:active{
+    text-decoration: none;
+    color:rgba(255,255,255,0.3);
+}
+
+@media (max-width: 900px) {
+    .abonement-list{
+        left: 235px;
+    }
+}

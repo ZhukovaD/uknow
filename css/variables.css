@@ -1,0 +1,261 @@
+:root{
+    --base-color: #FF0046;
+    --base-color-darker:#C00034;
+    --base-color-dark:#810023;
+
+    --add-color:#0D0D89;
+    --add-color-darker:#0A0A6B;
+    --add-color-dark:#07074A;
+
+    --button-inner-color:rgba(255,255,255,1);
+
+    --text-gray:#7C7C7C;
+    --gray:#BEBEBE;
+    --line-gray:#E2E2E2;
+    --lite-gray:#F7F7F7;
+
+    --important-color:#B40000;
+    --important-color-darker:#8F0000;
+    --important-color-dark:#6B0000;
+
+    --success-color:#1F9430;
+    --success-color-darker:#187125;
+    --success-color-dark:#165B20;
+
+    --ok-color:#FF9800;
+
+    --border: solid 1px #E2E2E2;
+
+    --bg:repeating-linear-gradient(120deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+    linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    --bg-size:70px 120px;
+
+    --title-font: "MyriadProBold", "Arial Bold", sans-serif;
+    --title-big: 38px;
+    --title-big-line-height:38px;
+    --title-medium:28px;
+    --title-medium-line-height:30px;
+    --title-small:17px;
+    --title-small-line-height:21px;
+    --title-color:#444444;
+
+    --text-font: "Helvetica Regular", "Arial", sans-serif;
+    --lite-font: "Helvetica Light", "Arial", sans-serif;
+    --text-small: 16px;
+    --text-small-line-height:22px;
+    --text-medium:18px;
+    --text-medium-line-height:22px;
+
+    --page-padding: 0 50px 0 50px;
+
+    --width:1100px;
+    --half-screen:700px;
+    --form-width:580px;
+    --big-button-width:520px;
+
+    --nav-min-width:100px;
+    --nav-max-width:150px;
+}
+
+
+.primary-button,
+.user-nav__item a,
+.profile__buy-button,
+.profile__type-of-abonement:hover{
+    --base-color: #FF0046;
+}
+
+.primary-button:hover,
+.user-nav__item a:active,
+.profile__type-of-abonement:active{
+    --base-color:#C00034;
+}
+
+.primary-button:active,
+.profile__buy-button:active{
+    --base-color:#810023;
+}
+
+
+
+.primary-button,
+.primary-link,
+.site-list__item a,
+.user-nav__item a,
+.typical__help--link{
+    --underline:none;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.typical__link:hover,
+.modal__help--link:hover,
+.modal__another-button:hover,
+.typical__inline-link:hover,
+.user-nav__item a:hover,
+.typical__help--link:hover{
+    --underline:underline;
+}
+
+
+
+.primary-button:active,
+.secondary-button:active,
+.third-button:active,
+.typical__link:active,
+.modal__help--link:active,
+.modal__another-button:active,
+.price__link:hover,
+.important-button:active,
+.main-nav__item a:hover,
+.main-nav__icon-logo:hover,
+.main-nav__icon,
+.profile__buy-button:active,
+.footer-menu__link a:hover,
+.main-nav__list--user .main-nav__item:hover{
+    --button-inner-color:rgba(255,255,255,0.6);
+}
+
+.price__link:active,
+.main-nav__item a:active,
+.main-nav__icon-logo:active,
+.main-nav__item a:active .main-nav__icon,
+.main-nav__list--user .main-nav__item:active,
+.footer-menu__link a:active{
+    --button-inner-color:rgba(255,255,255,0.3);
+}
+
+
+
+.secondary-button,
+.third-button,
+.third-button:hover,
+.typical__link,
+.modal__help--link,
+.modal__another-button,
+.typical__inline-link,
+.user-nav__item a,
+.profile__buy-button,
+.typical__input[type="radio"] + .typical__label::before,
+.typical__input[type="checkbox"] + .typical__label::before{
+    --add-color: #0D0D89;
+}
+
+
+.secondary-button:hover,
+.profile__buy-button:hover,
+.typical__input[type="radio"]:hover + .typical__label::before,
+.typical__input[type="checkbox"]:hover + .typical__label::before{
+    --add-color:#0A0A6B;
+}
+
+.secondary-button:active,
+.third-button:active,
+.typical__link:active,
+.modal__help--link:active,
+.modal__another-button:active
+.price__link:hover,
+.typical__inline-link:active,
+.user-nav__item a:active,
+.profile__buy-button:active,
+.typical__input[type="radio"]:active + .typical__label::before,
+.typical__input[type="checkbox"]:active + .typical__label::before{
+    --add-color:#07074A;
+}
+
+
+
+.important-button,
+.main-nav__allert-icon,
+.profile__exam-result--bad{
+    --important-color:#B40000;
+}
+
+.important-button:hover,
+.main-nav__allert-icon:hover{
+    --important-color:#8F0000;
+}
+
+.important-button:active,
+.main-nav__allert-icon:active{
+    --important-color:#6B0000;
+}
+
+.profile__exam-result--good{
+    --success-color:#1F9430;
+}
+
+.profile__exam-result--normal{
+    --ok-color:#FF9800;
+}
+
+
+@media(max-width: 900px){
+    :root{
+        --title-big: 32px;
+        --title-big-line-height:38px;
+        --title-medium:25px;
+        --title-medium-line-height:26px;
+        --title-small:16px;
+        --title-small-line-height:19px;
+
+        --text-small: 15px;
+        --text-small-line-height:20px;
+        --text-medium:17px;
+        --text-medium-line-height:19px;
+
+        --page-padding: 0 34px 0 34px;
+
+        --width:700px;
+        --half-screen:700px;
+        --form-width:580px;
+
+        --nav-min-width:80px;
+        --nav-max-width:100px;
+    }
+
+}
+
+.blog__text,
+.news__text{
+    --text-medium-line-height:25px;
+}
+
+.teacher__certificate-name{
+    --text-medium-line-height:19px;
+}
+
+@media(max-width: 768px){
+    :root{
+        --form-width:500px;
+        --big-button-width:440px;
+    }
+
+}
+
+@media(max-width: 500px){
+    :root{
+        --title-big: 25px;
+        --title-big-line-height:28px;
+        --title-medium:22px;
+        --title-medium-line-height:26px;
+
+        --text-small: 16px;
+        --text-small-line-height:22px;
+        --text-medium:16px;
+        --text-medium-line-height:26px;
+
+        --page-padding: 0 20px 0 20px;
+
+        --width:280px;
+        --half-screen:280px;
+        --form-width:280px;
+        --big-button-width:250px;
+
+        --nav-min-width:80px;
+        --nav-max-width:100px;
+    }
+
+}

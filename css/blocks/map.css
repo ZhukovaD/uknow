@@ -1,0 +1,16 @@
+.map {
+    height: 370px;
+    width: 100%;
+    background-color: rgb(240, 238, 232);
+    background-image: url("/img/map-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .map{
+    background-image: url("/img/map-desktop@2x.jpg");
+    }
+}

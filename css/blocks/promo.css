@@ -1,0 +1,43 @@
+.promo{
+      background-color: #393E8E;
+}
+
+.promo:hover{
+    background-color: #292B70;
+}
+
+.promo:active{
+    background-color: #1B1C4C;
+}
+
+.promo__wrapper{
+    max-width: var(--width);
+    padding: var(--page-padding);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.promo__text-container{
+    text-decoration: none;
+
+}
+
+.promo:active .promo__text-container p{
+    color: rgba(255,255,255,0.6);
+}
+
+.promo__text{
+    margin: 0;
+    padding: 30px;
+    color: #ffffff;
+    font-family: var(--lite-font);
+    font-size: var(--text-medium);
+    line-height: var(--text-small-line-height);
+    letter-spacing: 0.05rem;
+ }
+
+.promo__main{
+    font-family: var(--text-font);
+    font-weight: 800;
+    margin: 0;
+}

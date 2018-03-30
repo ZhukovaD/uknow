@@ -1,0 +1,125 @@
+.main-banner{
+    min-height: 663px;
+    background-color: #1E1471;
+    background-image:var(--bg);
+    background-size: var(--bg-size);
+}
+
+
+.main-banner__wrapper{
+    display: flex;
+    max-width: 885px;
+    margin: 0 auto;
+    padding-top: 200px;
+}
+
+.main-banner__wrapper--landing{
+    max-width: var(--half-screen);
+    flex-direction: column;
+    text-align: center;
+}
+
+.main-banner__logo{
+    margin-top: 29px;
+    margin-right: 75px;
+}
+
+.main-banner__description{
+    flex: 3;
+    font-family: var(--title-font);
+    color: #ffffff;
+}
+
+.main-banner__description h2{
+    margin: 13px 0 0 0;
+    padding-bottom: 27px;
+    font-size: var(--title-big);
+    line-height: var(--title-big-line-height);
+}
+
+.main-banner__button {
+    margin-left: 0;
+    width: 280px;
+}
+
+.main-banner__title h1{
+    font-family: var(--title-font);
+    color:#ffffff;
+    font-size:var(--title-big);
+    line-height: var(--title-big-line-height);
+    letter-spacing: 0.01em;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.main-banner__subtitle p{
+    font-size: 24px;
+    color:#ffffff;
+    line-height: 35px;
+    padding-bottom: 30px;
+}
+
+@media(max-width: 900px){
+    .main-banner__wrapper{
+        max-width: var(--width);
+        padding: var(--page-padding);
+        padding-top: 200px;
+    }
+
+    .main-banner__logo{
+        margin-top: 29px;
+        margin-right: 35px;
+    }
+
+    .main-banner__logo-icon{
+        fill:#ffffff;
+        width: 350px;
+    }
+
+    .main-banner__subtitle p{
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+}
+
+@media(max-width: 768px){
+    .main-banner__logo{
+        margin-top: 20px;
+    }
+
+    .main-banner__wrapper{
+        padding-top: 150px;
+    }
+}
+
+@media(max-width: 600px){
+
+    .main-banner{
+        min-height: 350px;
+        max-height: 600px;
+    }
+
+    .main-banner__wrapper{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    .main-banner__description h2{
+        padding-bottom: 47px;
+    }
+
+    .main-banner__logo{
+        display: none;
+    }
+
+    .main-banner__button{
+        width: 280px;
+    }
+
+    .main-banner__subtitle p{
+        display: none;
+    }
+}

@@ -1,0 +1,55 @@
+.certificate{
+    max-width: var(--width);
+    margin: 0 auto;
+}
+
+.certificate__title{
+    font-family: var(--title-font);
+    font-size: var(--title-big);
+    color:var(--title-color);
+    text-align: center;
+    margin-top: 70px;
+    padding-bottom: 50px;
+}
+
+.certificate__description{
+    font-family: var(--text-font);
+    font-size: var(--text-medium);
+    line-height: var(--text-medium-line-height);
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.certificate__cards{
+    width: 886px;
+    height: 360px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media (max-width: 900px) {
+    .certificate__cards{
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .certificate{
+        max-width: var(--width);
+        padding: var(--page-padding);
+    }
+}
+
+@media (max-width: 500px) {
+    .certificate__title{
+        padding-bottom: 20px;
+    }
+
+    .certificate__description{
+        padding-bottom: 40px;
+    }
+
+    .certificate__cards{
+        height: 200px;
+    }
+}

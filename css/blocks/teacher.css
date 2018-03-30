@@ -1,0 +1,147 @@
+.teacher{
+     display:flex;
+     flex-direction: column;
+     min-height: 900px;
+     background-color: #1E1471;
+     background-image:var(--bg);
+     background-size: var(--bg-size);
+     padding-bottom: 40px;
+ }
+
+.teacher__title{
+    font-family: var(--title-font);
+    font-size: var(--title-big);
+    line-height: var(--title-big-line-height);
+    color:#ffffff;
+    text-align: center;
+    margin-top: 70px;
+    padding-bottom: 50px;
+}
+
+.teacher__item{
+    width: 70%;
+    max-width: var(--width);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 40px 90px 40px 90px;
+}
+
+.teacher__main-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.teacher__photo{
+    margin-right: 40px;
+    flex: 3;
+}
+
+.teacher__info{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.teacher__name{
+    font-family: var(--title-font);
+    font-size: var(--title-medium);
+    line-height: var(--title-medium-line-height);
+    color:var(--title-color);
+    padding-bottom: 8px;
+    flex:0 0 auto;
+    white-space: nowrap;
+}
+
+.teacher__description{
+    padding-bottom: 20px;
+    flex:1 0 auto;
+}
+
+.teacher__social{
+    flex:0 0 auto;
+}
+
+.teacher__social-item{
+    display: inline-block;
+    fill:var(--gray);
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
+.teacher__position{
+    font-size: var(--text-small);
+    line-height: var(--text-small-line-height);
+    color:var(--text-gray);
+    padding-bottom: 20px;
+}
+
+.teacher__certificate-wrapper{
+    display: flex;
+    width: 100%;
+}
+
+.teacher__certificate{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+}
+
+.teacher__certificate-name{
+    font-family: var(--title-font);
+    font-size: var(--text-medium);
+    line-height: var(--text-medium-line-height);
+    color: var(--title-color);
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.teacher__certificate-date{
+    font-family: var(--lite-font);
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+@media (max-width: 900px) {
+    .teacher__item{
+        width: 80%;
+        padding: 30px 50px 30px 50px;
+    }
+
+}
+
+@media (max-width: 770px) {
+    .teacher__main-wrapper{
+        flex-direction: column;
+    }
+
+    .teacher__name{
+        margin-top: 8px;
+        white-space: normal;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .teacher__certificate-wrapper{
+        margin-top: 50px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .teacher__certificate{
+        margin-top: 0;
+        margin-bottom: 20px;
+        max-width: 45%;
+        padding: 0;
+    }
+
+    .teacher__certificate-date{
+        font-size: 12px;
+    }
+
+}

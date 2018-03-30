@@ -1,0 +1,19 @@
+.footer-logo__icon{
+    fill:rgba(255,255,255,0.6);
+}
+
+.footer-logo__icon:hover{
+    fill:rgba(255,255,255,0.85);
+}
+
+.footer-logo__icon:active{
+    fill:rgba(255,255,255,1);
+}
+
+@media(max-width: 900px){
+    .footer-logo__icon{
+        height: 74px;
+        width: 182px;
+    }
+
+}

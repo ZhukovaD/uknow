@@ -1,0 +1,302 @@
+.main-nav{
+    width: 100%;
+    background-color: #1C2459;
+}
+
+.main-nav--landing{
+    background:none;
+}
+
+.main-nav__wrapper{
+    max-width: var(--width);
+    margin: 0 auto;
+    padding: var(--page-padding);
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+}
+
+.main-nav__list{
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav__list--site{
+    justify-content: flex-start;
+    flex:1 0 auto;
+}
+
+.main-nav__list--user{
+    justify-content: flex-end;
+    flex:0 0 auto;
+}
+
+.main-nav__item{
+    min-width: 30px;
+    max-width: 120px;
+    padding: 20px 5px 15px 20px;
+    flex-grow:1;
+}
+
+.main-nav__list--user .main-nav__item{
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--button-inner-color);
+}
+
+.main-nav__item--user-info{
+    padding: 0;
+    padding-top: 13px;
+}
+
+.main-nav__item:first-child{
+    padding-left: 0;
+}
+
+.main-nav__item a{
+    text-decoration: var(--underline);
+    color:var(--button-inner-color);
+    letter-spacing: 0.02em;
+}
+
+.main-nav__item--logo{
+    padding: 0;
+    padding-top: 12px;
+    margin-left: 0;
+}
+
+.main-nav__icon{
+    margin-right: 1px;
+    fill:var(--button-inner-color);
+}
+
+.main-nav__icon-logo{
+    fill: var(--button-inner-color);
+    margin-right: 0;
+}
+
+.main-nav__main-text{
+    display: none;
+}
+
+.main-nav__user-name{
+    margin-top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main-nav__avatar{
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    height: 30px;
+    width: 30px;
+    border:solid 2px #ffffff;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+.main-nav__allert-icon{
+    position: absolute;
+    top:10px;
+    right: 0;
+    fill:var(--important-color);
+    cursor: pointer;
+}
+
+.main-nav__toggle{
+     display: none;
+ }
+
+.main-nav__list--user .main-nav__item:last-child{
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .main-nav__item{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .main-nav__list--user .main-nav__item{
+        padding-left: 10px;
+    }
+
+    .main-nav__item--logo{
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav__wrapper{
+        flex-direction: column;
+        padding: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+    .main-nav__list{
+        flex-direction: column;
+        padding: var(--page-padding);
+        justify-content: space-around;
+        padding-bottom: 10px;
+        padding-top:10px;
+    }
+    .main-nav__list--user{
+        border-top: 1px solid rgb(78,83,120);
+        padding-top:5px;
+    }
+    .main-nav__sublist{
+        display: none;
+    }
+    .main-nav__icon{
+        display: none;
+    }
+    .main-nav__item{
+        width: 280px;
+        margin: 0 auto;
+        padding: 10px 5px 10px 5px;
+        flex-grow:1;
+    }
+    .main-nav__item a{
+        text-transform: uppercase;
+    }
+    .main-nav__main-text{
+        display: inline;
+    }
+    .main-nav__icon-logo{
+        display: none;
+    }
+    .main-nav__item--logo{
+        padding: 10px 5px 10px 5px;
+        flex-grow:1;
+    }
+
+    .main-nav__item--user-info{
+        max-width: 180px;
+    }
+
+
+
+
+    /*Общий стиль для переключателя*/
+    .main-nav__toggle {
+        background: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        display: block;
+        width: 80px;
+        height: 50px;
+        cursor: pointer;
+        border: none;
+    }
+
+
+
+    /*СТИЛИЗАЦИЯ ЗАКРЫТОГО МЕНЮ*/
+
+    .main-nav--closed .main-nav__list--site{
+         display: none;
+     }
+
+    .main-nav--closed .main-nav__list--user{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .main-nav--closed .main-nav__list--user .main-nav__item:not(:last-child){
+        display: none;
+    }
+
+    /*Общий стиль для последнего элемента списка юзер, отвечающего за шапку при закрытом меню*/
+    .main-nav--closed .main-nav__list--user .main-nav__item:last-child{
+        display: block;
+        padding: 0;
+        width: 100%;
+        height: 42px;
+    }
+
+    /*Создание кнопки - бургера*/
+    .main-nav--closed .main-nav__toggle::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top:22px;
+        right: 40px;
+        height: 2px;
+        width: 25px;
+        background-color:rgb(255,255,255);
+        box-shadow: 0 8px 0 0 rgb(255,255,255), 0 16px 0 0 rgb(255,255,255);
+    }
+
+    .main-nav--closed .main-nav__toggle:hover::before{
+        background-color:rgb(148,150,175);
+        box-shadow: 0 8px 0 0 rgb(148,150,175), 0 16px 0 0 rgb(148,150,175);
+    }
+
+    .main-nav--closed .main-nav__toggle:active::before{
+        background-color:rgb(78,83,120);
+        box-shadow: 0 8px 0 0 rgb(78,83,120), 0 16px 0 0 rgb(78,83,120);
+    }
+
+
+
+    /*СТИЛИЗАЦИЯ ОТКРЫТОГО МЕНЮ*/
+
+    /*Не отображать последний элемент списка юзер, отвечающий за шапку при закрытом меню*/
+    .main-nav--opened .main-nav__list--user .main-nav__item:last-child{
+        display: none;
+    }
+
+    /*Стилизация кнопки - бургера */
+    .main-nav--opened .main-nav__toggle::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top:22px;
+        right: 40px;
+        height: 2px;
+        width: 25px;
+        background-color:rgb(255,255,255);
+        box-shadow: none;
+        transform: rotate(45deg);
+    }
+
+    .main-nav--opened .main-nav__toggle:hover::before{
+        background-color:rgb(148,150,175);
+    }
+
+    .main-nav--opened .main-nav__toggle:active::before{
+        background-color:rgb(78,83,120);
+    }
+
+    .main-nav--opened .main-nav__toggle::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top:22px;
+        right: 40px;
+        height: 2px;
+        width: 25px;
+        background-color:rgb(255,255,255);
+        box-shadow: none;
+        transform: rotate(-45deg)
+    }
+
+    .main-nav--opened .main-nav__toggle:hover::after{
+         background-color:rgb(148,150,175);
+     }
+
+    .main-nav--opened .main-nav__toggle:active::after{
+        background-color:rgb(78,83,120);
+    }
+}

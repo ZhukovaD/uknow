@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/HelveticaLight.woff" as="font">
+    <link rel="preload" href="fonts/HelveticaRegular.woff" as="font">
+    <link rel="preload" href="fonts/MyriadProBold.woff" as="font">
+    <link rel="preload" href="style.css" as="style">
+    <link href="style.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/manifest.json">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#828282">
+    <meta name="apple-mobile-web-app-title" content="UKnow">
+    <meta name="application-name" content="UKnow">
+    <meta name="theme-color" content="#ffffff">
+    <script src="js/picturefill.js" defer></script>
+</head>
+<body>
+
+<div style="display: none">
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon-abonement" viewBox="0 0 14 14">
+            <text transform="translate(-128 -1)" font-size="15" font-family="Ionicons" font-weight="400">
+                <tspan x="128" y="14">&#xF48F;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-allert" viewBox="0 0 10 11">
+            <text transform="translate(-1027 -16)" font-size="12" font-family="Ionicons" font-weight="400">
+                <tspan x="1027" y="26">&#xF35B;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 12 21">
+            <text transform="translate(-4 -17)" font-size="20" font-family="simple-line-icons">
+                <tspan x="0" y="36">&#xE605;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-arrow-link" viewBox="0 0 7 12"><title>&#xF125;</title>
+            <text transform="translate(-132 -145)"fill-rule="evenodd" font-size="13"
+                  font-family="Ionicons" font-weight="400">
+                <tspan x="132" y="156">&#xF125;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-arrow-more" viewBox="0 0 7 12">
+            <text transform="translate(-365 -816)" font-size="13" font-family="Ionicons" font-weight="400">
+                <tspan x="365" y="827">&#xF125;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 12 21">
+            <text transform="translate(-1062 -17)" font-size="20" font-family="simple-line-icons">
+                <tspan x="1058" y="36">&#xE606;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-calendar" viewBox="0 0 14 14">
+            <text transform="translate(0 -1)" font-size="15" font-family="Ionicons" font-weight="400">
+                <tspan x="0" y="14">&#xF117;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 11 11">
+            <text transform="translate(-1027 -16)" font-size="12" font-family="Ionicons" font-weight="400">
+                <tspan x="1027" y="26">&#xF120;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-closed" viewBox="0 0 18 18"><title>ion-close-round - Ionicons</title>
+            <text transform="translate(-856 -122)" font-size="24" font-family="Ionicons" font-weight="400">
+                <tspan x="856" y="140">&#xF129;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 23 23">
+            <text transform="translate(-129 -3)" font-size="30" font-family="Ionicons" font-weight="400">
+                <tspan x="129.699" y="26">&#xF351;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-logo_white_medium" viewBox="0 0 242 98"><title>logo_white_medium</title>
+            <path d="M97.9 77.7c0 .2.1.3.3.3h6.8c.2 0 .3-.1.3-.3v-.9c0-.2-.1-.3-.3-.3h-5.3v-3.6h4.5c.2 0 .3-.1.3-.3v-.9c0-.2-.1-.3-.3-.3h-4.5V68h5.3c.2 0 .3-.1.3-.3v-.9c0-.2-.1-.3-.3-.3h-6.8c-.2 0-.3.1-.3.3v10.9zm9.5 0c0 .2.2.3.3.3h1.1c.2 0 .3-.1.3-.3v-8.2l7.3 8.7h.4c.2 0 .3-.1.3-.3V66.5c0-.2-.1-.3-.3-.3h-1.1c-.2 0-.3.1-.3.3v7.9l-7.3-8.4h-.4c-.2 0-.3.1-.3.3v11.4zm11.8-5.6c0 3.4 2.7 6 6.1 6 2.4 0 4.2-1.1 4.2-1.1.1-.1.1-.2.1-.3v-4.1c0-.2-.1-.3-.3-.3h-3.1c-.2 0-.3.1-.3.3v1c0 .2.1.3.3.3h1.7v1.9c-.2.1-1.1.6-2.5.6-2.4 0-4.2-2-4.2-4.3 0-2.4 1.8-4.4 4.2-4.4 1 0 2.1.5 2.9 1.1.2.2.3.2.4 0l.8-.8c.1-.1.1-.3 0-.5-1.1-1-2.5-1.6-4.1-1.6-3.5.1-6.2 2.9-6.2 6.2zm12.6 5.6c0 .2.1.3.3.3h6c.2 0 .3-.1.3-.3v-.9c0-.2-.1-.3-.3-.3h-4.6v-9.9c0-.2-.1-.3-.3-.3h-1.1c-.2 0-.3.1-.3.3v11.1zm7.9 0c0 .2.2.3.3.3h1.1c.2 0 .3-.2.3-.3V66.5c0-.2-.1-.3-.3-.3H140c-.2 0-.3.1-.3.3v11.2zm4-.9c.3.3 1.6 1.3 3.6 1.3 2.2 0 3.8-1.4 3.8-3.2 0-2.1-1.7-3-3.6-3.8-1.4-.6-2.1-1.2-2.1-2.1 0-.6.5-1.5 1.9-1.5 1 0 2.2.8 2.3.8.2.2.5.1.6-.2.1-.2.3-.4.4-.6.1-.2.1-.4-.1-.6-.2-.1-1.4-1-3.1-1-2.7 0-3.7 1.8-3.7 3.1 0 1.9 1.4 2.8 3.1 3.6 1.7.7 2.6 1.3 2.6 2.3 0 .9-.7 1.6-1.9 1.6-1.3 0-2.6-1.1-2.7-1.2-.2-.2-.4-.1-.6.1-.2.2-.3.5-.4.7-.4.5-.3.6-.1.7zm9.2.9c0 .2.2.3.3.3h1.1c.2 0 .3-.1.3-.3v-4.9h6.2v4.9c0 .2.1.3.3.3h1.1c.2 0 .3-.2.3-.3V66.5c0-.2-.1-.3-.3-.3h-1.1c-.2 0-.3.1-.3.3v4.7h-6.2v-4.7c0-.2-.1-.3-.3-.3h-1.1c-.2 0-.3.1-.3.3v11.2zm15.8 0c0 .2.1.3.3.3h6c.2 0 .3-.1.3-.3v-.9c0-.2-.1-.3-.3-.3h-4.6v-9.9c0-.2-.1-.3-.3-.3H169c-.2 0-.3.1-.3.3v11.1zm8 0c0 .2.1.3.3.3h6.8c.2 0 .3-.1.3-.3v-.9c0-.2-.1-.3-.3-.3h-5.3v-3.6h4.5c.2 0 .3-.1.3-.3v-.9c0-.2-.1-.3-.3-.3h-4.5V68h5.3c.2 0 .3-.1.3-.3v-.9c0-.2-.1-.3-.3-.3H177c-.2 0-.3.1-.3.3v10.9zm8.9-.9c.3.3 1.6 1.3 3.6 1.3 2.2 0 3.8-1.4 3.8-3.2 0-2.1-1.7-3-3.6-3.8-1.4-.6-2.1-1.2-2.1-2.1 0-.6.5-1.5 1.9-1.5 1 0 2.2.8 2.3.8.2.2.5.1.6-.2.1-.2.3-.4.4-.6.1-.2.1-.4-.1-.6-.2-.1-1.4-1-3.1-1-2.7 0-3.7 1.8-3.7 3.1 0 1.9 1.4 2.8 3.1 3.6 1.7.7 2.6 1.3 2.6 2.3 0 .9-.7 1.6-1.9 1.6-1.3 0-2.6-1.1-2.7-1.2-.2-.2-.4-.1-.6.1s-.3.5-.4.7c-.4.5-.3.6-.1.7zm8.6 0c.3.3 1.6 1.3 3.6 1.3 2.2 0 3.8-1.4 3.8-3.2 0-2.1-1.7-3-3.6-3.8-1.4-.6-2.1-1.2-2.1-2.1 0-.6.5-1.5 1.9-1.5 1 0 2.2.8 2.3.8.2.2.5.1.6-.2.1-.2.3-.4.4-.6.1-.2.1-.4-.1-.6-.2-.1-1.4-1-3.1-1-2.7 0-3.7 1.8-3.7 3.1 0 1.9 1.4 2.8 3.1 3.6 1.7.7 2.6 1.3 2.6 2.3 0 .9-.7 1.6-1.9 1.6-1.3 0-2.6-1.1-2.7-1.2-.2-.2-.4-.1-.6.1-.2.2-.3.5-.4.7-.4.5-.3.6-.1.7zm8.4-4.7c0-3.3 2.7-6 6-6.1 3.3 0 6.1 2.7 6.1 6 0 3.4-2.7 6-6.1 6-3.3.1-6-2.5-6-5.9zm1.7 0c0 2.4 2 4.3 4.4 4.3 2.4 0 4.4-1.9 4.4-4.3s-2-4.4-4.4-4.4c-2.4 0-4.4 2-4.4 4.4zm12.4 5.6c0 .2.2.3.3.3h1.1c.2 0 .3-.1.3-.3v-8.2l7.3 8.7h.4c.2 0 .3-.1.3-.3V66.5c0-.2-.1-.3-.3-.3H225c-.2 0-.3.1-.3.3v7.9l-7.3-8.4h-.4c-.2 0-.3.1-.3.3v11.4zm12-.9c.3.3 1.6 1.3 3.6 1.3 2.2 0 3.8-1.4 3.8-3.2 0-2.1-1.7-3-3.6-3.8-1.4-.6-2.1-1.2-2.1-2.1 0-.6.5-1.5 1.9-1.5 1 0 2.2.8 2.3.8.2.2.5.1.6-.2.1-.2.3-.4.4-.6.1-.2.1-.4-.1-.6-.2-.1-1.4-1-3.1-1-2.7 0-3.7 1.8-3.7 3.1 0 1.9 1.4 2.8 3.1 3.6 1.7.7 2.6 1.3 2.6 2.3 0 .9-.7 1.6-1.9 1.6-1.3 0-2.6-1.1-2.7-1.2-.2-.2-.4-.1-.6.1-.2.2-.3.5-.4.7-.4.5-.3.6-.1.7zm-147.4-20V8c0-4.4-3.6-8-8-8H8C3.6 0 0 3.6 0 8v57.4c0 4.4 3 10 6.6 12.4 0 0 7.4 5.9 23.8 12 5 2.2 10 7.6 10 7.6.1 0 5-5.5 10.1-7.7 15.3-6.1 24-12.1 24-12.1 1.5-.9 2.9-2.4 4.1-4.1-.2-.2-.6-.4-1.6-.4H64.6c-.8 0-1.1 0-1.4.1-2.6 1.5-7.6 4-15 7-3.9 1.7-7.3 4.1-7.3 4.1-.1 0-4.1-2.3-7.9-4-12.4-4.6-17.1-8.2-17.1-8.2-2.8-1.7-5.1-5.8-5.1-9.2V16.5c0-3.3 2.7-6 6-6h48c3.3 0 6 2.7 6 6V53s0 2-1.5 2H60c-2.2 0-2.7-2.5-2.7-3.3V34.4c0-1-.8-1.7-1.7-1.7h-6.7c-1.4 0-1.9.4-1.9 1.7v14.7c-.5 3.2-3.4 6.6-7.1 6.6-4.1 0-6.5-2.9-6.5-7.6V23.6c0-1-.8-1.7-1.7-1.7h-7.3c-.9 0-1.7.7-1.7 1.7v24.3c0 9 4 17.3 15 17.3 7 0 10.3-3.7 11.9-5.1l1.1 2.9c.3.7.8 1.3 1.7 1.3h25.5c2.2 0 2.9-.7 2.9-.7.1 0 .8-.6.8-2.3-.2-1.5-.2-3-.3-4.5zm13.3-11.2c0 6.1 2.7 11.8 10.2 11.8 4.8 0 7-2.5 8.1-3.5l.7 2c.2.5.5.9 1.1.9h2.2c.6 0 1.1-.5 1.1-1.1V33.9c0-.7-.5-1.1-1.1-1.1h-4.6c-1 0-1.3.2-1.3 1.1v12.5c-.4 2.2-2.3 4.5-4.8 4.5-2.8 0-4.4-2-4.4-5.2V33.9c0-.7-.5-1.1-1.1-1.1h-4.9c-.6 0-1.1.5-1.1 1.1l-.1 11.7zm29.6 10c0 .6.5 1.1 1.1 1.1h5.1c.6 0 1.1-.5 1.1-1.1V45.5l9.5 10.8c.2.2.7.5 1 .5h6.5c1 0 1.4-1 .8-1.7l-10.7-11.5 9-9.1c.6-.7.2-1.7-.8-1.7h-5.5c-.7 0-1.1.4-1.5.7l-8.3 8.4v-26c0-.6-.5-1.1-1.1-1.1h-5.1c-.6 0-1.1.5-1.1 1.1v39.7zm28.3 0c0 .6.5 1.1 1.1 1.1h4.5c1.1 0 1.5-.3 1.5-1.1V42.4c.6-1.6 2.5-3.8 5.7-3.8 2.9 0 4.5 2 4.5 5.1v11.9c0 .6.5 1.1 1.1 1.1h4.9c.6 0 1.1-.5 1.1-1.1V44.1c0-6.2-3.1-11.9-10.7-11.9-4.6 0-7.6 2.6-8.5 3.5l-.8-2.2c-.2-.4-.5-.7-1-.7h-2.3c-.6 0-1.1.5-1.1 1.1v21.7zm28.2-10.9c0-6.8 5.5-12.5 12.4-12.5 6.8 0 12.4 5.8 12.4 12.5 0 6.9-5.5 12.7-12.4 12.7s-12.4-5.8-12.4-12.7zm6.6 0c0 3.4 2.5 6.2 5.8 6.2 3.2 0 5.8-2.8 5.8-6.2 0-3.4-2.6-6.1-5.8-6.1-3.3.1-5.8 2.8-5.8 6.1zm27.3 12c.1.4.5.7 1 .7h.3c.5 0 .8-.2 1-.5l7.5-14h.1l7.6 14c.2.3.5.5 1 .5h.2c.6 0 1-.3 1.1-.7l7.5-22.6c.3-.8-.2-1.4-1.1-1.4h-3.9c-.7 0-1.1.1-1.4.7l-3.6 10.7h-.1l-6.1-11.5c-.2-.3-.4-.5-1-.5h-.5c-.5 0-.8.3-1 .5l-6.1 11.5h-.1l-3.6-10.7c-.1-.4-.7-.7-1.1-.7H208c-.8 0-1.4.6-1 1.4l7.6 22.6z"/>
+        </symbol>
+        <symbol id="icon-logo_white_small" viewBox="0 0 88 36"><title>logo</title>
+            <path d="M35.59 28.653c0 .062.05.117.117.117h2.456a.117.117 0 0 0 .116-.117v-.341a.117.117 0 0 0-.116-.118h-1.94v-1.332h1.639c.061 0 .116-.05.116-.118v-.347a.121.121 0 0 0-.116-.118h-1.64v-1.264h1.94a.117.117 0 0 0 .117-.117v-.347a.117.117 0 0 0-.116-.118h-2.456a.117.117 0 0 0-.117.118v4.102zm3.455 0a.12.12 0 0 0 .116.117h.387a.117.117 0 0 0 .117-.117v-3.018h.006l2.665 3.197h.16c.06 0 .116-.05.116-.111v-4.17a.121.121 0 0 0-.117-.118h-.393a.117.117 0 0 0-.116.118v2.93h-.006l-2.665-3.11h-.154c-.06 0-.116.05-.116.111v4.17zm4.283-2.045a2.21 2.21 0 0 0 2.21 2.224c.89 0 1.523-.409 1.523-.409a.154.154 0 0 0 .05-.099c0-.495-.007-1.004-.007-1.5 0-.061-.049-.117-.11-.117h-1.118a.113.113 0 0 0-.116.118v.36c0 .061.049.11.116.11h.602v.695c-.062.024-.411.21-.921.21-.872 0-1.541-.743-1.541-1.605 0-.867.67-1.61 1.541-1.61.374 0 .755.167 1.044.42.061.056.11.063.16.007.091-.1.183-.192.276-.291.049-.05.043-.124-.007-.174-.417-.36-.902-.576-1.491-.576a2.22 2.22 0 0 0-2.21 2.237zm4.585 2.045c0 .062.049.117.116.117h2.186a.117.117 0 0 0 .117-.117v-.341a.117.117 0 0 0-.117-.118h-1.664v-3.643a.121.121 0 0 0-.116-.118h-.406a.117.117 0 0 0-.116.118v4.102zm2.902 0a.12.12 0 0 0 .116.117h.406a.121.121 0 0 0 .116-.117V24.55a.121.121 0 0 0-.116-.118h-.406a.121.121 0 0 0-.116.118v4.102zm1.428-.31c.099.093.571.49 1.32.49.798 0 1.37-.527 1.37-1.172 0-.756-.608-1.097-1.32-1.388-.51-.21-.78-.427-.78-.78 0-.23.178-.558.694-.558.356 0 .785.285.828.31.086.055.166.018.215-.062l.154-.236a.148.148 0 0 0-.037-.21 2.068 2.068 0 0 0-1.136-.366c-.976 0-1.344.663-1.344 1.146 0 .719.49 1.047 1.117 1.314.608.254.927.49.927.861 0 .316-.27.577-.694.577-.473 0-.945-.397-.982-.428-.068-.056-.154-.031-.209.05-.055.08-.104.173-.16.254-.06.105-.018.148.037.198zm3.375.31a.12.12 0 0 0 .117.117h.405a.117.117 0 0 0 .117-.117v-1.791h2.247v1.79c0 .063.049.118.116.118h.406a.121.121 0 0 0 .116-.117V24.55a.121.121 0 0 0-.116-.118h-.406a.117.117 0 0 0-.116.118v1.728h-2.247V24.55a.117.117 0 0 0-.117-.118h-.405a.121.121 0 0 0-.117.118v4.102zm5.743 0c0 .062.05.117.117.117h2.185a.117.117 0 0 0 .117-.117v-.341a.117.117 0 0 0-.117-.118H62v-3.643a.121.121 0 0 0-.117-.118h-.405a.117.117 0 0 0-.117.118v4.102zm2.902 0c0 .062.05.117.117.117h2.456a.117.117 0 0 0 .116-.117v-.341a.117.117 0 0 0-.116-.118h-1.94v-1.332h1.639c.061 0 .116-.05.116-.118v-.347a.121.121 0 0 0-.116-.118h-1.64v-1.264h1.94a.117.117 0 0 0 .117-.117v-.347a.117.117 0 0 0-.116-.118H64.38a.117.117 0 0 0-.117.118v4.102zm3.215-.31c.099.093.571.49 1.32.49.798 0 1.37-.527 1.37-1.172 0-.756-.608-1.097-1.32-1.388-.51-.21-.78-.427-.78-.78 0-.23.178-.558.693-.558.357 0 .786.285.83.31.085.055.165.018.214-.062l.154-.236a.148.148 0 0 0-.037-.21 2.068 2.068 0 0 0-1.136-.366c-.976 0-1.345.663-1.345 1.146 0 .719.492 1.047 1.118 1.314.608.254.927.49.927.861 0 .316-.27.577-.694.577-.473 0-.945-.397-.982-.428-.068-.056-.154-.031-.209.05-.055.08-.104.173-.16.254-.06.105-.018.148.037.198zm3.136 0c.098.093.57.49 1.32.49.798 0 1.369-.527 1.369-1.172 0-.756-.608-1.097-1.32-1.388-.51-.21-.78-.427-.78-.78 0-.23.178-.558.694-.558.356 0 .786.285.829.31.086.055.165.018.215-.062l.153-.236a.148.148 0 0 0-.037-.21 2.068 2.068 0 0 0-1.136-.366c-.976 0-1.344.663-1.344 1.146 0 .719.491 1.047 1.117 1.314.608.254.927.49.927.861 0 .316-.27.577-.693.577-.473 0-.946-.397-.983-.428-.067-.056-.153-.031-.208.05-.056.08-.105.173-.16.254-.062.105-.019.148.037.198zm3.061-1.735c0-1.24.977-2.237 2.205-2.237 1.227 0 2.21.997 2.21 2.237 0 1.24-.983 2.224-2.21 2.224a2.2 2.2 0 0 1-2.205-2.224zm.614 0c0 .886.719 1.605 1.59 1.605.878 0 1.597-.719 1.597-1.605 0-.88-.719-1.618-1.596-1.618-.872 0-1.59.738-1.59 1.618zm4.517 2.045a.12.12 0 0 0 .117.117h.387a.117.117 0 0 0 .116-.117v-3.018h.006l2.665 3.197h.16c.061 0 .116-.05.116-.111v-4.17a.121.121 0 0 0-.116-.118h-.393a.117.117 0 0 0-.117.118v2.93h-.006l-2.665-3.11h-.153c-.062 0-.117.05-.117.111v4.17zm4.357-.31c.099.093.571.49 1.32.49.799 0 1.37-.527 1.37-1.172 0-.756-.608-1.097-1.32-1.388-.51-.21-.78-.427-.78-.78 0-.23.178-.558.694-.558.356 0 .785.285.828.31.086.055.166.018.215-.062l.154-.236a.148.148 0 0 0-.037-.21 2.068 2.068 0 0 0-1.136-.366c-.976 0-1.344.663-1.344 1.146 0 .719.49 1.047 1.117 1.314.608.254.927.49.927.861 0 .316-.27.577-.694.577-.473 0-.945-.397-.982-.428-.068-.056-.154-.031-.209.05-.055.08-.104.173-.16.254-.06.105-.018.148.037.198zM34.4 16.812c0 2.258.986 4.36 3.705 4.36 1.733 0 2.544-.93 2.939-1.283l.263.73c.065.177.197.332.416.332h.812c.219 0 .416-.2.416-.42v-8.012a.418.418 0 0 0-.416-.42h-1.667c-.35 0-.482.088-.482.42v4.603c-.132.797-.833 1.66-1.754 1.66-1.009 0-1.601-.73-1.601-1.903v-4.36a.418.418 0 0 0-.417-.42h-1.798a.418.418 0 0 0-.416.42v4.293zm10.75 3.718c0 .222.197.42.416.42h1.864c.22 0 .417-.198.417-.42v-3.74l3.464 3.984a.544.544 0 0 0 .373.177h2.368c.373 0 .504-.376.285-.62l-3.903-4.227 3.267-3.364c.22-.243.088-.642-.285-.642h-1.995c-.241 0-.395.133-.548.266l-3.026 3.098V5.88a.433.433 0 0 0-.417-.421h-1.864c-.219 0-.416.2-.416.42V20.53zm10.29 0c0 .222.197.42.416.42h1.623c.416 0 .548-.11.548-.42v-4.869a2.202 2.202 0 0 1 2.06-1.394c1.053 0 1.645.73 1.645 1.881v4.382c0 .222.176.42.417.42h1.798c.22 0 .417-.198.417-.42v-4.249c0-2.301-1.119-4.404-3.903-4.404a4.299 4.299 0 0 0-3.092 1.306l-.307-.82c-.066-.154-.176-.265-.373-.265h-.833a.418.418 0 0 0-.417.42v8.012zm10.267-4.028c0-2.5 2.017-4.625 4.495-4.625s4.495 2.125 4.495 4.625c0 2.546-2.017 4.67-4.495 4.67s-4.495-2.124-4.495-4.67zm2.39 0c0 1.262.92 2.28 2.105 2.28 1.162 0 2.105-1.018 2.105-2.28 0-1.239-.943-2.235-2.105-2.235-1.184 0-2.105.996-2.105 2.235zm9.939 4.427c.044.132.175.243.372.243h.11a.387.387 0 0 0 .35-.199l2.742-5.157h.022l2.763 5.157c.065.11.175.2.35.2h.088c.22 0 .35-.112.395-.244l2.74-8.322c.11-.287-.087-.509-.394-.509h-1.425c-.242 0-.417.022-.505.266l-1.315 3.961h-.022l-2.215-4.249a.363.363 0 0 0-.35-.199h-.176a.375.375 0 0 0-.35.2l-2.237 4.248h-.022l-1.316-3.961c-.044-.155-.263-.266-.395-.266h-1.578c-.307 0-.505.222-.373.51l2.74 8.32zm-48.455.032V3.002a3 3 0 0 0-3-3.002H3C1.348 0 0 1.344 0 3.002v21.084c0 1.66 1.11 3.755 2.48 4.683 0 0 2.622 2.135 8.59 4.4 1.815.813 3.62 2.787 3.646 2.787.025 0 1.8-2.017 3.676-2.85 5.548-2.26 8.651-4.432 8.651-4.432.435-.266.844-.648 1.201-1.098.121-.277.167-.59-.244-.59h-4.52c-.368 0-.479.007-.572.048-.479.296-2.026 1.182-5.398 2.555-1.42.63-2.643 1.514-2.663 1.514-.019 0-1.505-.851-2.879-1.467-4.518-1.714-5.547-2.63-5.547-2.63-1.403-.862-2.54-2.91-2.54-4.559V6.882a3.003 3.003 0 0 1 3.007-2.998H22.67a3.007 3.007 0 0 1 3.008 2.998v12.702h-.002s0 .748-.529.748H21.78c-.794 0-.993-.908-.993-1.204v-6.441a.614.614 0 0 0-.613-.617h-2.448c-.515 0-.708.13-.708.617v5.423c-.194 1.169-1.224 2.435-2.577 2.435-1.482 0-2.352-1.071-2.352-2.792v-9.05a.614.614 0 0 0-.612-.616H8.836a.614.614 0 0 0-.612.616v8.953c0 3.31 1.45 6.394 5.444 6.394 2.544 0 3.736-1.363 4.316-1.882l.387 1.071c.096.26.29.487.612.487h1.191c.049 0 5.503.012 8.073.008.783 0 1.05-.244 1.063-.249.03-.01.289-.226.288-.844-.001-.503-.009-1.113-.017-1.68z"/>
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 27 22">
+            <text transform="translate(0 -5)" font-size="30" font-family="Ionicons" font-weight="400">
+                <tspan x="0" y="27">&#xF2EB;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-news" viewBox="0 0 12 12">
+            <text transform="translate(-255 -2)" font-size="15" font-family="Ionicons" font-weight="400">
+                <tspan x="255" y="14">&#xF391;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-person" viewBox="0 0 11 11">
+            <text transform="translate(-79 -4)" font-size="14" font-family="Ionicons" font-weight="400">
+                <tspan x="79" y="15">&#xF3A0;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 22 22">
+            <text transform="translate(-42 -5)" font-size="30" font-family="Ionicons" font-weight="400">
+                <tspan x="42.524" y="27">&#xF4B9;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-signin" viewBox="0 0 12 12">
+            <text transform="translate(0 -3)" font-size="15" font-family="Ionicons" font-weight="400">
+                <tspan x="0" y="15">&#xF385;</tspan>
+            </text>
+        </symbol>
+        <symbol id="icon-vk" viewBox="0 0 33 19">
+            <text transform="translate(-80 -7)" font-size="30" font-family="FontAwesome">
+                <tspan x="80.087" y="26">&#xF189;</tspan>
+            </text>
+        </symbol>
+    </svg>
+</div>
+
+<div id="root">
+    <header class="page-header">
+        <nav class="main-nav main-nav--closed">
+            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list main-nav__list--site">
+                    <li class="main-nav__item main-nav__item--logo">
+                        <a href="index.html">
+                            <svg class="main-nav__icon-logo" width="88" height="36">
+                                <use xlink:href="#icon-logo_white_small"></use>
+                            </svg><span class="main-nav__main-text">Главная</span></a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="calendar.html">
+                            <svg class="main-nav__icon" width="14" height="15">
+                                <use xlink:href="#icon-calendar"></use>
+                            </svg>
+                            Расписание</a>
+                    </li>
+                    <li class="main-nav__item abonement">
+                        <a href="abonements.html">
+                            <svg class="main-nav__icon" width="14" height="15">
+                                <use xlink:href="#icon-abonement"></use>
+                            </svg>
+                            Абонементы</a>
+                        <ul class="main-nav__sublist abonement-list">
+                            <li class="abonement-list__item">
+                                <a href="individual.html">Индивидуальные занятия</a>
+                            </li>
+                            <li class="abonement-list__item">
+                                <a href="individual.html">Групповые занятия</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="blog.html">
+                            <svg class="main-nav__icon" width="14" height="11">
+                                <use xlink:href="#icon-news"></use>
+                            </svg>
+                            Новости</a>
+                    </li>
+                </ul>
+
+
+                <ul class="main-nav__list main-nav__list--user">
+                    <li class="main-nav__item main-nav__item--user-info">
+                        <a href="user.html" title="Кот Василий">
+                            <picture>
+                                <img class="main-nav__avatar" src="img/avatar-desktop@1x.jpg" srcset="img/avatar-desktop@2x.jpg 2x"
+                                     alt="Кот Василий">
+                            </picture>
+                            <span class="main-nav__user-name">Кот Василий</span></a>
+                        <a class="main-nav__allert-link" href="abonements.html" title="Абонемент заканчивается">
+                            <svg class="main-nav__allert-icon" width="11" height="12">
+                                <use xlink:href="#icon-allert"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="index.html">
+                            <!--Ссылка временно, для наглядности-->
+                            <svg class="main-nav__icon" width="11" height="11">
+                                <use xlink:href="#icon-signin"></use>
+                            </svg>
+                            Выход</a>
+                    </li>
+
+                    <li class="main-nav__item"></li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="user-nav">
+            <ul class="user-nav__list">
+                <li class="user-nav__item">
+                    <a href="user.html">Профиль</a>
+                </li>
+                <li class="user-nav__item">
+                    <a href="user-exams.html">Экзамены</a>
+                </li>
+                <li class="user-nav__item  user-nav__item--active">
+                    <a href="user-settings.html">Настройки</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="page-main">
+        <section class="profile">
+            <h2 class="profile__title profile__title--no-border">Персональная информация</h2>
+            <div class="profile__info profile__info--personal">
+                <picture>
+                    <img src="img/user-cat-desktop@1x.jpg" srcset="img/user-cat-desktop@2x.jpg 2x"
+                         alt="Кот Василий">
+                </picture>
+                <div class="profile__right">
+                    <button class="button third-button profile__get-file-button">Выбрать файл</button>
+                    <button class="button secondary-button profile__get-file-button">Сохранить</button>
+                </div>
+            </div>
+                <form class="profile__form">
+                    <label class="typical__label" for="user-name">Имя</label>
+                    <input class="typical__input" id="user-name" type="text" name="user-name" placeholder="Василий">
+
+                    <label class="typical__label" for="user-surname">Фамилия</label>
+                    <input class="typical__input" id="user-surname" type="text" name="user-surname" placeholder="Кот">
+
+                    <fieldset class="typical__fieldset">
+                        <legend class="typical__label">Пол</legend>
+                        <input class="typical__input" id="female" type="radio" name="sex" value="female">
+                        <label for="female" class="typical__label typical__label--radio">Женский</label>
+
+                        <input class="typical__input" id="male" type="radio" name="sex" value="male" checked>
+                        <label for="male" class="typical__label typical__label--radio">Мужской</label>
+                    </fieldset>
+
+                    <label class="typical__label" for="tel">Телефон для связи</label>
+                    <input class="typical__input" id="tel" type="tel" name="user-surname" placeholder="8(888)999-99-99">
+
+                    <input class="button secondary-button typical__big-button" type="submit" value="Сохранить">
+                </form>
+        </section>
+
+
+        <section class="profile">
+            <h2 class="profile__title">Электронная почта</h2>
+            <p class="profile__description">Для авторизации на сайте вы используете электронную почту <span class="typical__link">kot-vasiliy@mail.ru</span></p>
+            <h3 class="profile__subtitle">Сменить электронную почту</h3>
+            <form class="profile__form">
+                <label class="typical__label" for="new-email">Новая электронная почта</label>
+                <input class="typical__input" id="new-email" type="email" name="new-user-email">
+
+                <label class="typical__label" for="user-password">Текущий пароль</label>
+                <input class="typical__input" id="user-password" type="password" name="user-password">
+                <a class="typical__help typical__help--link typical__help--link-right" href="recovery-email.html" title="Восстановить пароль">Забыли пароль?</a>
+
+                <input class="button secondary-button typical__big-button" type="submit" value="Сохранить">
+            </form>
+        </section>
+
+        <section class="profile">
+            <h2 class="profile__title">Сменить пароль</h2>
+            <form class="profile__form">
+                <label class="typical__label" for="password">Текущий пароль</label>
+                <input class="typical__input" id="password" type="password" name="password">
+                <a class="typical__help typical__help--link typical__help--link-right" href="recovery-email.html" title="Восстановить пароль">Забыли пароль?</a>
+
+
+                <label class="typical__label" for="new-password">Новый пароль</label>
+                <input class="typical__input" id="new-password" type="password" name="new-password">
+
+                <label class="typical__label" for="repeat-new-password">Повторите новый пароль</label>
+                <input class="typical__input" id="repeat-new-password" type="password" name="repeat-new-password">
+
+                <input class="button secondary-button typical__big-button" type="submit" value="Сохранить">
+            </form>
+        </section>
+
+        <section class="profile">
+            <p class="profile__description profile__description--border">Вы можете <a class="typical__link" href="delete-password.html" title="Удалить аккаунт">удалить</a> свой аккаунт.</p>
+        </section>
+
+
+    </main>
+
+    <footer class="page-footer">
+        <div class="page-footer__wrapper">
+            <div class="page-footer__logo footer-logo">
+                <a class="footer-logo__item" href="index.html" title="На главную">
+                    <svg class="footer-logo__icon" height="78" width="202">
+                        <use xlink:href="#icon-logo_white_medium"></use>
+                    </svg>
+                    <span class="visually-hidden">На главную страницу</span></a>
+            </div>
+            <div class="page-footer__menu footer-menu">
+                <div class="footer-menu__item">
+                    <h3 class="footer-menu__title">Абонементы</h3>
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__link"><a href="abonements.html">Виды абонементов</a></li>
+                        <li class="footer-menu__link"><a href="individual.html">Индивидуальные</a></li>
+                        <li class="footer-menu__link"><a href="individual.html">Занятия в группе</a></li>
+                        <li class="footer-menu__link"><a href="pay.html">Оплата</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu__item">
+                    <h3 class="footer-menu__title">Информация</h3>
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__link"><a href="about.html">О курсах</a></li>
+                        <li class="footer-menu__link"><a href="calendar.html">Расписание</a></li>
+                        <li class="footer-menu__link"><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu__item">
+                    <h3 class="footer-menu__title">Другое</h3>
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__link"><a href="feedback.html">Связаться с нами</a></li>
+                        <li class="footer-menu__link"><a href="blog.html">Новости</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-footer__social social">
+
+                <a class="social__item" href="mailto:kts.uknow@gmail.com" title="Наша почта">
+                    <svg class="social__icon" width="25" height="30">
+                        <use xlink:href="#icon-mail"></use>
+                    </svg>
+                    <span class="visually-hidden">Наша почта</span></a>
+
+                <a class="social__item" href="tel:89313871282" title="Наш телефон">
+                    <svg class="social__icon" width="25" height="30">
+                        <use xlink:href="#icon-phone"></use>
+                    </svg>
+                    <span class="visually-hidden">Наш телефон</span></a>
+
+                <a class="social__item" href="https://vk.com/uknowspb" title="Мы в Вконтакте" target="_blank">
+                    <svg class="social__icon" width="35" height="28">
+                        <use xlink:href="#icon-vk"></use>
+                    </svg>
+                    <span class="visually-hidden">Мы ВКонтакте</span></a>
+
+                <a class="social__item" href="#" title="Мы в Инстаграме" target="_blank">
+                    <svg class="social__icon" width="25" height="30">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                    <span class="visually-hidden">Мы в Инстаграме</span></a>
+
+            </div>
+        </div>
+        <div class="page-footer__copyright">
+            <p>&copy; ИП Кочергина Татьяна Сергеевна, 2017 — 2018 г.</p>
+        </div>
+    </footer>
+
+</div>
+
+<script src="js/menu.js"></script>
+<script src="js/menu-mobile.js"></script>
+
+</body>
+</html>

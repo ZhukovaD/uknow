@@ -1,0 +1,75 @@
+.impressions{
+    max-width: var(--width);
+    padding: var(--page-padding);
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.impressions__list{
+    list-style: none;
+    max-width: 522px;
+    margin: 0 auto;
+    padding: 110px 0 0 0;
+}
+
+.impressions__item{
+    display: flex;
+}
+
+.impressions__user-img{
+    width: 60px;
+    height: 60px;
+    border: solid 2px var(--add-color);
+    border-radius: 50%;
+    background-image: url("../img/impressions-user-photo@1x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .impressions__user-img{
+        background-image: url("../img/impressions-user-photo@2x.jpg");
+    }
+}
+
+.impressions__user-text{
+    flex:6;
+    margin: 0 0 0 32px;
+    font-family: var(--text-font);
+    font-size: var(--text-small);
+    line-height: var(--text-small-line-height);
+    padding-bottom: 95px;
+}
+
+.impressions__user-text footer{
+    color:var(--text-gray)
+}
+
+.impressions__user-text footer p{
+    margin: 20px 0 0 0;
+}
+
+@media (max-width: 500px) {
+
+    .impressions{
+        margin-bottom: 60px;
+    }
+
+    .impressions__list{
+        padding: 50px 0 0 0;
+    }
+
+    .impressions__user-img{
+        display: none;
+    }
+
+    .impressions__user-text{
+        margin: 10px;
+        padding-bottom: 45px;
+    }
+
+    .impressions__button{
+
+    }
+
+}

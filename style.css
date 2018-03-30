@@ -1,0 +1,43 @@
+@import "css/normalize.css";
+@import "css/fonts.css";
+@import "css/variables.css";
+@import "css/scaffolding.css";
+@import "css/button.css";
+@import "css/typical.css";
+@import "css/modal.css";
+
+@import "css/blocks/page-header.css";
+@import "css/blocks/page-main.css";
+@import "css/blocks/main-nav.css";
+@import "css/blocks/abonement-list.css";
+@import "css/blocks/user-list.css";
+@import "css/blocks/user-nav.css";
+
+@import "css/blocks/main-banner.css";
+@import "css/blocks/features.css";
+@import "css/blocks/promo.css";
+@import "css/blocks/impressions.css";
+
+@import "css/blocks/page-footer.css";
+@import "css/blocks/footer-logo.css";
+@import "css/blocks/footer-menu.css";
+@import "css/blocks/social.css";
+
+@import "css/blocks/sale.css";
+
+@import "css/blocks/landing-nav.css";
+@import "css/blocks/process.css";
+@import "css/blocks/teacher.css";
+@import "css/blocks/certificate.css";
+@import "css/blocks/cards.css";
+@import "css/blocks/price.css";
+
+@import "css/blocks/nav-stroke.css";
+
+@import "css/blocks/blog.css";
+@import "css/blocks/pages.css";
+@import "css/blocks/news.css";
+
+@import "css/blocks/map.css";
+
+@import "css/blocks/profile.css";

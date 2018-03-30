@@ -1,0 +1,15 @@
+.page-header{
+    width: 100%;
+}
+
+.page-header--landing{
+    position: absolute;
+    top:0;
+}
+
+@media (max-width: 768px) {
+    .page-header--landing{
+        position: relative;
+        background-color: #1C2459;
+    }
+}
